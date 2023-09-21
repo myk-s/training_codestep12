@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+@forward "config/base";
+@use "config/base" as bs;
+
+#header {
+    background-color: bs.$white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+    & > .wrapper {
+        .site-title {
+            margin: 20px 0;
+
+            a {
+                img {
+                    width: 145px;
+                }
+            }
+        }
+    }
+
+    nav {
+        background-color: bs.$black;
+
+        @include bs.mq {
+            overflow-y: scroll;
+        }
+
+        .wrapper.flex-container {
+            justify-content: flex-start;
+            align-items: center;
+            
+            li {
+                padding: 10px 60px 10px 0;
+
+                &:last-child {
+                    padding-right: 16px;
+                }
+                
+                a {
+                    color: bs.$white;
+                }
+            }
+        }
+    }
+}

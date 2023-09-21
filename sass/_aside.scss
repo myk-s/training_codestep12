@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+@forward "config/base";
+@use "config/base" as bs;
+
+#contents {
+
+    aside {
+        width: 33%;
+
+        @include bs.mq {
+            width: 100%;
+        }
+
+        .author-box {
+            margin-top: 15px;
+            margin-bottom: 80px;
+            text-align: center;
+
+            @include bs.mq {
+                margin-top: 0;
+            }
+
+            .author-image {
+                width: 130px;
+                height: 130px;
+                border-radius: 50%;
+            }
+
+            .author-name {
+                font-size: bs.rem(18);
+                font-weight: bold;
+                margin: 30px 0;
+            }
+
+            .author-text {
+                text-align: left;
+            }
+        }
+
+        .ranking-box {
+            margin-bottom: 63px;
+            text-align: center;
+            
+            .ranking-list {
+                .ranking-item {
+                    margin-bottom: 33px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    & > a {
+                        display: block;
+
+                        .ranking-title {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+
+        .archive-box {
+            margin-bottom: 140px;
+            text-align: center;
+
+            @include bs.mq {
+                margin-bottom: 120px;
+            }
+
+            .archive-list {
+                text-align: left;
+
+                & > li {
+                    padding: 18px 0 18px 20px;
+                    border-top: 1px solid bs.$border-color;
+
+                    &:last-child {
+                        border-bottom: 1px solid bs.$border-color;
+                    }
+                }
+            }
+        }
+    }
+}

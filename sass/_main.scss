@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+@forward "config/base";
+@use "config/base" as bs;
+
+#contents {
+    
+    &.flex-container {
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        @include bs.mq {
+            flex-direction: column;
+        }
+        
+        main {
+            width: 65%;
+            
+            @include bs.mq {
+                width: 100%;
+            }
+            
+            .article-box {
+                margin-bottom: 75px;
+    
+                @include bs.mq {
+                    margin-bottom: 86px;
+                }
+                
+                &:last-child {
+                    margin-bottom: 0;
+    
+                    @include bs.mq {
+                        margin-bottom: 80px;
+                    }
+                }
+                
+                .article-title {
+                    font-size: bs.rem(24);
+                    line-height: bs.lh(28, 24);
+                }
+                
+                .article-info {
+                    padding: 12px 0 10px 0;
+
+                    @include bs.mq {
+                        padding-top: 21px;
+                    }
+
+                    .article-date {
+                        display: inline-block;
+                        margin-right: 20px;
+                    }
+
+                    .article-category {
+                        display: inline-block;
+                    }
+                }
+
+                .article-image {
+                    display: block;
+                    margin-bottom: 7px;
+                }
+
+                .article-text {
+                    font-size: bs.rem(16);
+                    margin-bottom: 40px;
+
+                    @include bs.mq {
+                        margin-bottom: 64px;
+                    }
+                }
+            }
+        }
+    }
+}

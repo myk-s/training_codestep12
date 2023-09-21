@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+// media query
+$breakPoints: 768px;
+
+@mixin mq {
+    @media screen and (max-width: $breakPoints) {
+        @content;
+    }
+}

@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+@forward "config/base";
+@use "config/base" as bs;
+
+#pickup {
+    margin-top: 150px;
+    margin-bottom: 65px;
+
+    @include bs.mq {
+        margin-top: 140px;
+        margin-bottom: 96px;
+    }
+
+    &.flex-container {
+        justify-content: space-between;
+        align-items: center;
+
+        @include bs.mq {
+            flex-direction: column;
+        }
+
+        article {
+            width: 32%;
+
+            @include bs.mq {
+                width: 100%;
+                margin-bottom: 30px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .pickup-image {
+                margin-bottom: 7px;
+            }
+
+            .pickup-title {
+                font-size: bs.rem(16);
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
